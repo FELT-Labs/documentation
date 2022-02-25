@@ -16,7 +16,7 @@ For example you can imagine three separate companies who decide to cooperate on 
 There are many applications where companies/individuals can make use of federated learning:
 
 * Car manufactures creating self driving
-* Hospitals developing AI to better threat patients
+* Hospitals developing AI to better treat patients
 * Individuals sharing data from fitness tracking devices
 * Ecommerce providing better products to customers&#x20;
 {% endhint %}
