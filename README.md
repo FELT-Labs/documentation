@@ -18,14 +18,14 @@ There are many applications where companies/individuals can make use of federate
 * Car manufactures creating self driving
 * Hospitals developing AI to better treat patients
 * Individuals sharing data from fitness tracking devices
-* Ecommerce providing better products to customers&#x20;
+* Ecommerce providing better products to customers
 {% endhint %}
 
 FELToken makes this process simple by providing our own software for training the models and then aggregating them. We use blockchain in order to ensure fairness of the process and mange exchange of the models. All models are encrypted during exchange so only approved parties can use them. Furthermore data providers (companies/individuals) can join and anonymously provide data. This also allows data scientists to work with private data without compromising their privacy. Finally we can reward data providers for their participation in training
 
 _There are multiple approaches to federated learning. At the moment FELToken implements only one of them, but we have plans to extend this in the future._
 
-__
+\_\_
 
 ### Smart Contracts
 
@@ -54,12 +54,16 @@ Using smart contracts over a central server brings certain benefits.
 
 Follow our handy guides to get started on the basics as quickly as possible:
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="guides/getting-started.md" %}
+[getting-started.md](guides/getting-started.md)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="guides/data-provider.md" %}
+[data-provider.md](guides/data-provider.md)
+{% endcontent-ref %}
+
+{% content-ref url="guides/builder-data-scientist.md" %}
+[builder-data-scientist.md](guides/builder-data-scientist.md)
 {% endcontent-ref %}
 
 ### Fundamentals: Dive a little deeper
@@ -73,4 +77,3 @@ Learn the fundamentals of FELT to get a deeper understanding of our main feature
 {% content-ref url="fundamentals/projects.md" %}
 [projects.md](fundamentals/projects.md)
 {% endcontent-ref %}
-

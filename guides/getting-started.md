@@ -11,6 +11,10 @@ In this guide we will go over all steps from creating a project to training a ma
 3. Training machine learning models
 4. Using final models
 
+{% embed url="https://youtu.be/uoBl2yeO7hY" %}
+Video tutorial following similar structure as this guide.
+{% endembed %}
+
 ### Transaction Fees
 
 Right now the project is deployed on Polygon Mumbai testnet. First you will need some MATIC tokens to pay for the transaction fees. You can obtain these using Polygon faucet. Just visit following link and paste your wallet address:
