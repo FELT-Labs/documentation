@@ -59,6 +59,8 @@ Once finished you should see an address of your project. You can click on this a
 
 In order to add data providers to the project, they first have to request an access to the project. This is done through the project dashboard.
 
+![Empty project dashboard displayed for an user with (default) viewer role.](../.gitbook/assets/brandbird.png)
+
 {% hint style="info" %}
 User refers to a wallet address. In case you don't see the request buttons, make sure that you connected your MetaMask wallet.
 {% endhint %}
@@ -128,7 +130,11 @@ _Currently there can be only one training plan executed at the same time._
 
 ## Using Final Model
 
-If you created a plan, you can watch it in the project dashboard. Once the plan is finished, you should see a download button next to it (this is only available to builder who created the training plan). By clicking the **DOWNLOAD** button you will obtain the model. The model is encrypted. Before the download starts, you will see a MetaMask pop-up asking you to decrypt the data (the model). After approving the decryption, you should receive `model.joblib` file. In your Python code, you can use this file as follows:
+If you created a plan, you can watch it in the project dashboard. Once the plan is finished, you should see a download button next to it (this is only available to builder who created the training plan).
+
+![Downloading model from project dashboard.](../.gitbook/assets/brandbird2.png)
+
+By clicking the **DOWNLOAD** button you will obtain the model. The model is encrypted. Before the download starts, you will see a MetaMask pop-up asking you to decrypt the data (the model). After approving the decryption, you should receive `model.joblib` file. In your Python code, you can use this file as follows:
 
 ```
 import numpy as np

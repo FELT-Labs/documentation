@@ -9,6 +9,7 @@
 * [Data Provider](guides/data-provider.md)
 * [Builder (Data Scientist)](guides/builder-data-scientist.md)
 * [Using Final Models](guides/using-final-models.md)
+* [Creating Custom Models](guides/creating-custom-models.md)
 
 ## Fundamentals
 
