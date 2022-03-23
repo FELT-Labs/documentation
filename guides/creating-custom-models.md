@@ -3,7 +3,7 @@
 Defining a custom model is relatively simple. First, you have to install `felt` pip package (this guide was created for version `0.1.0`):
 
 ```
-pip install git+https://github.com/FELToken/federated-learning-token
+pip install feltoken
 ```
 
 Then you will need to define API token for the web3.storage as an environment variable:

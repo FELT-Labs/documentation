@@ -1,6 +1,6 @@
 # Using Final Models
 
-Right now FELToken supports only **scikit-learn** models. Models are exported using **joblib** library. That means that you need correct version of the **joblib** and **scikit-learn** libraries. You can find these in [felt package requirements](https://github.com/FELToken/federated-learning-token/blob/main/requirements-lib.txt).
+Right now FELToken supports only **scikit-learn** models. Models are exported using **joblib** library. That means that you need correct version of the **joblib** and **scikit-learn** libraries. You can find these in [felt package requirements](https://github.com/FELToken/feltoken.py/blob/main/requirements.txt).
 
 ```
 joblib==1.1.0
@@ -22,12 +22,4 @@ print("Model details:", model.__dict__)
 # X should contain the data you want to use for prediction
 X = np.array([...])
 result = model.predict(X)
-```
-
-**Important:** In order to run this code you need correct version of the joblib and scikit-learn libraries. You can find these in [felt package requirements](https://github.com/FELToken/federated-learning-token/blob/main/requirements-lib.txt).
-
-```
-joblib==1.1.0
-numpy==1.21.0
-scikit-learn==1.0.1
 ```

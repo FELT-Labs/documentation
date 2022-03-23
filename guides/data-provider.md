@@ -19,7 +19,7 @@ The request then must be accepted by another data provider (e.g. project creator
 Finally when you are added as data provider to the project, you need to run a local client which will watch the smart contract and train the models on local data. For this you will first be required to install **Python 3.9+**. Then you can install the client code using `pip` as:
 
 ```
-pip install git+https://github.com/FELToken/federated-learning-token
+pip install feltoken
 ```
 
 In the project dashboard you will be provided with command which you have to run in order to start the client code. It should look something like this (the contract address and chain ID may differ):

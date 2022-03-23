@@ -33,13 +33,13 @@ Follow the instuctions here to obtain MetaMask
 
 Once you have the MetaMask installed, you can head to the FELToken application:
 
-{% embed url="https://feltoken.ai/#/app" %}
+{% embed url="https://app.feltoken.ai" %}
 
 Here in top-right corner you should see **CONNECT** button with MetaMask icon. On left is dropdown button with different networks. Make sure that `Polygon Mumbai` is selected and click connect. After that you just need to approve the connection in the MetaMask pop-up window. In case any issues occur, make sure that you have `Polygon Mumbai` network selected in your MetaMask as well.
 
 ## Creating Project
 
-Once you have your wallet connected, you are ready to create your first project. Start by clicking the **CREATE PROJECT** button in top-right corner leading to [the create project page](https://feltoken.ai/#/app/create-project). On this page you need to fill up the form providing basic information about the project:
+Once you have your wallet connected, you are ready to create your first project. Start by clicking the **CREATE PROJECT** button in top-right corner leading to [the create project page](https://app.feltoken.ai/#/create-project). On this page you need to fill up the form providing basic information about the project:
 
 * **Name** - name of the project (63 characters max)
 * **Type** - right now there is only one project type
@@ -74,7 +74,7 @@ The request then must be accepted by another data provider (e.g. project creator
 Finally when you are added as data provider to the project, you need to run a local client which will watch the smart contract and train the models on local data. For this you will first be required to install **Python 3.9+**. Then you can install the client code using `pip` as:
 
 ```
-pip install git+https://github.com/FELToken/federated-learning-token
+pip install feltoken
 ```
 
 In the project dashboard you will be provided with command which you have to run in order to start the client code. It should look something like this (the contract address and chain ID may differ):
@@ -148,7 +148,7 @@ X = np.array([...])
 result = model.predict(X)
 ```
 
-**Important:** In order to run this code you need correct version of the joblib and scikit-learn libraries. You can find these in [felt package requirements](https://github.com/FELToken/federated-learning-token/blob/main/requirements-lib.txt).
+**Important:** In order to run this code you need correct version of the joblib and scikit-learn libraries. You can find these in [felt package requirements](https://github.com/FELToken/feltoken.py/blob/main/requirements.txt).
 
 ```
 joblib==1.1.0
