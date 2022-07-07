@@ -4,7 +4,7 @@ description: From creating project to model training.
 
 # Getting Started
 
-In this guide we will go over all steps from creating a project to training a machine learning model. The goal of this guide is to go over all necessary parts of FELToken. This process consists of:
+In this guide we will go over all steps from creating a project to training a machine learning model. The goal of this guide is to go over all necessary parts of FELT. This process consists of:
 
 1. Creating a project
 2. Adding and connecting data providers
@@ -93,7 +93,7 @@ Once the code starts, you will be asked to provide your **private key** (it must
 Follow the instructions for obtaining private key and paste it to the terminal.
 {% endembed %}
 
-Next you will be asked to provide [web3.storage](https://web3.storage) API token. This token can be obtained for free you just need to register. This token is then used to store encrypted models on IPFS using Filecoin. For more instructions follow:
+Next you will be asked to provide [web3.storage](https://web3.storage/) API token. This token can be obtained for free you just need to register. This token is then used to store encrypted models on IPFS using Filecoin. For more instructions follow:
 
 {% embed url="https://docs.web3.storage/how-tos/generate-api-token" %}
 Create an account and follow instruction to obtain the API token.

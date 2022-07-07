@@ -1,12 +1,8 @@
-# What is FELToken?
+# What is FELT Labs?
 
-{% hint style="info" %}
-**FELT** is short for Federated Learning Token
-{% endhint %}
+FELT Labs is a set of tools for running federated learning on blockchain. In general, during federated learning interested parties must set up the main server for managing the process. We want to replace this server with a smart contract, making the setup simpler and bringing extra security benefits. The core of FELT Labs are a set of smart contracts, a python package for running the node (being data provider), and a web application for interacting contracts.
 
-FELT is a set of tools for running federated learning on blockchain. In general, during federated learning interested parties must set up the main server for managing the process. We want to replace this server with a smart contract, making the setup simpler and bringing extra security benefits. The core of FELToken are a set of smart contracts, a python package for running the node (being data provider), and a web application for interacting contracts.
-
-### Federated Learning & How FELToken Works
+### Federated Learning & How FELT Works
 
 The federated learning denotes process of training single machine learning model by multiple parties with private data.
 
@@ -21,9 +17,9 @@ There are many applications where companies/individuals can make use of federate
 * Ecommerce providing better products to customers
 {% endhint %}
 
-FELToken makes this process simple by providing our own software for training the models and then aggregating them. We use blockchain in order to ensure fairness of the process and mange exchange of the models. All models are encrypted during exchange so only approved parties can use them. Furthermore data providers (companies/individuals) can join and anonymously provide data. This also allows data scientists to work with private data without compromising their privacy. Finally we can reward data providers for their participation in training
+FELT makes this process simple by providing our own software for training the models and then aggregating them. We use blockchain in order to ensure fairness of the process and mange exchange of the models. All models are encrypted during exchange so only approved parties can use them. Furthermore data providers (companies/individuals) can join and anonymously provide data. This also allows data scientists to work with private data without compromising their privacy. Finally we can reward data providers for their participation in training
 
-_There are multiple approaches to federated learning. At the moment FELToken implements only one of them, but we have plans to extend this in the future._
+_There are multiple approaches to federated learning. At the moment FELT implements only one of them, but we have plans to extend this in the future._
 
 \_\_
 

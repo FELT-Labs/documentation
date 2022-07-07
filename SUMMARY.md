@@ -1,6 +1,6 @@
 # Table of contents
 
-* [What is FELToken?](README.md)
+* [What is FELT Labs?](README.md)
 * [Roles](roles.md)
 
 ## Guides
@@ -26,4 +26,4 @@
 
 * [FAQ](extras/faq.md)
 * [Helpful links](extras/helpful-links.md)
-* [FELToken](https://feltoken.ai)
+* [FELT Labs](https://feltlabs.ai/)

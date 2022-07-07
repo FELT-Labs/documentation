@@ -1,6 +1,6 @@
 # Helpful links
 
-Twitter: [https://twitter.com/FELToken](https://twitter.com/FELToken)
+Twitter: [https://twitter.com/FELT\_labs](https://twitter.com/FELT\_labs)
 
 Our discord server:
 
