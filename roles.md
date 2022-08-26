@@ -1,41 +1,35 @@
 # Roles
 
 {% hint style="info" %}
-When referring to **user** we mean single blockchain address.
+When referring to the **user** we mean a single blockchain address.
 {% endhint %}
 
-In our application we define three main roles: viewer, builder, and data provider. These roles are always associated with given project. You can have builder role in one project and only viewer role in different project. The roles are associated with your blockchain address. You can be both builder and data provider for single project.
+In FELT, we define two main roles: data scientist and data provider. The data provider is anyone publishing their data on Ocean protocol. The data scientist is then a person who selects suitable datasets and starts the training. Data provider or data scientist can be any kind of entity (person, company, etc.) with the ability to publish data or start training.
 
-### Viewer
+### Data Scientist
 
 {% hint style="info" %}
-Viewer can view basic info and request access to a project.
+Data scientist trains ML models on the datasets.
 {% endhint %}
 
-The default role for every user is viewer role. Viewer can see the state of a project contract (anybody on blockchain can view this information). This allows user to learn basic information about the project, for example, project name, description, number of participants, etc. All models exchanged as part of the project are encrypted, therefore, viewer can't use them.
+Data scientist is the person picking datasets and running machine learning on them. The process of training can be started through FELT application: [app.feltlabs.ai](https://app.feltlabs.ai/). In the application, he can pick dataset ids (DIDs), specify the model type and start the training. In order to be able to run the training, the data scientist must pay the necessary fees for training a purchasing the data from data providers. After that, he or she can monitor training progress and initiate the creation of the final (global) model.
 
-Viewer can also request access to become builder or data provider for given project. Access can be requested in web application through project dashboard.
+For more details read:
 
-### Builder
-
-{% hint style="info" %}
-Builder can train ML models on the project.
-{% endhint %}
-
-Builder can create **training plans** for given project. Training plans are definitions of machine learning models plus number of rounds which will be trained by data providers. Once training plan is created, data providers download the plan and start training process. Only builder who created the training plan can download final model.
-
-Other than that builder can also approve/decline requests from viewers to become builders. Builder can also request to become a data provider. All of this can be done through the project dashboard.
+{% content-ref url="guides/builder-data-scientist.md" %}
+[builder-data-scientist.md](guides/builder-data-scientist.md)
+{% endcontent-ref %}
 
 ### Data Provider
 
 {% hint style="info" %}
-Data provider owns private data and use them to train ML models.
+Data provider owns private data and provides them on Ocean protocol.
 {% endhint %}
 
-Data providers are data owners who decide to participate in project. Once you become data provider (sometimes referred as **node**), you have to run the data provider code. This code will watch project contract and executes training plans when they arrive. Data itself never leaves your machine. Only the trained models are exchanged with other data providers and builder.
+Data providers are data owners. They can publish their data on Ocean protocol and make them available for computation. By doing that, they can also specify the price for using their data. They can control which algorithms can be used on top of their data; therefore, data providers must approve the FELT local training algorithm. They also have to ensure that their data are in a format compatible with FELT.
 
-Data provider can go inactive by deactivating himself through the project dashboard. Data providers can approved incoming data providers. They can also become a builders. &#x20;
+For more details read:
 
-### Project Creator
-
-Once the project is created, the user who created it becomes a data provider and builder at the same time. This allows project creator to approve new builders and data providers.
+{% content-ref url="guides/data-provider.md" %}
+[data-provider.md](guides/data-provider.md)
+{% endcontent-ref %}

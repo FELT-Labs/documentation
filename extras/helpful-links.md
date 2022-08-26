@@ -8,4 +8,4 @@ Our discord server:
 
 GitHub:
 
-{% embed url="https://github.com/FELToken" %}
+{% embed url="https://github.com/FELT-Labs" %}

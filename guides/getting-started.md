@@ -4,14 +4,15 @@ description: From creating project to model training.
 
 # Getting Started
 
-In this guide we will go over all steps from creating a project to training a machine learning model. The goal of this guide is to go over all necessary parts of FELT. This process consists of:
+In this guide, we will use a sample problem to go over all steps necessary for federated learning with FELT. This process consists of:
 
-1. Creating a project
-2. Adding and connecting data providers
-3. Training machine learning models
-4. Using final models
+1. Initial setup
+2. Preparing datasets
+3. Starting local training
+4. Aggregating results from local training
+5. Using final model
 
-{% embed url="https://youtu.be/uoBl2yeO7hY" %}
+{% embed url="https://youtu.be/RYi9aj5lP8E" %}
 Video tutorial following similar structure as this guide.
 {% endembed %}
 
