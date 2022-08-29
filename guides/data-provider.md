@@ -12,6 +12,15 @@ _Keep in mind that once you publish your data, the Ocean provider code has full 
 
 ### Data Format
 
+For using FELT with your own data, you will first need to have data in the correct data format. Right now, we support only **CSV format**. With the following rules:
+
+* CSV contains only numerical data
+* The last column is the target column
+* Remove header row from data
+* All datasets used during training must have the same number of columns
+
+You can check this file [`house-prices-part1.csv`](https://gist.github.com/Breta01/a8482d3cae0c257e9a7394ca72fdb281) for example data file (**last column is target column** other columns are used as features).
+
 ### Publishing data
 
 Publishing data can be done through Ocean marketplace. The web application will walk you through the whole process. For more details please read:
@@ -20,3 +29,4 @@ Publishing data can be done through Ocean marketplace. The web application will 
 
 ### Approve FELT Algorithms
 
+If you are using your data, don’t forget to allow the “Local Training — FELT” algorithm or just all published algorithms.

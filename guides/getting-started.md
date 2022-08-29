@@ -16,13 +16,7 @@ In this guide, we will use a sample problem to go over all steps necessary for f
 Video tutorial following similar structure as this guide.
 {% endembed %}
 
-### Transaction Fees
-
-Right now the project is deployed on Polygon Mumbai testnet. First you will need some MATIC tokens to pay for the transaction fees. You can obtain these using Polygon faucet. Just visit following link and paste your wallet address:
-
-{% embed url="https://faucet.polygon.technology" %}
-Head to this site to obtain MATIC tokens for paying transaction fees.
-{% endembed %}
+## Initial Setup
 
 ### Connecting MetaMask
 
@@ -34,128 +28,115 @@ Follow the instuctions here to obtain MetaMask
 
 Once you have the MetaMask installed, you can head to the FELToken application:
 
-{% embed url="https://app.feltoken.ai" %}
+{% embed url="https://app.feltlabs.ai/" %}
 
-Here in top-right corner you should see **CONNECT** button with MetaMask icon. On left is dropdown button with different networks. Make sure that `Polygon Mumbai` is selected and click connect. After that you just need to approve the connection in the MetaMask pop-up window. In case any issues occur, make sure that you have `Polygon Mumbai` network selected in your MetaMask as well.
+Here in top-right corner you should see **CONNECT** button with MetaMask icon. Make sure that `Polygon Mumbai` is selected in the MetaMask and click connect. After that you just need to approve the connection in the MetaMask pop-up window.
 
-## Creating Project
+_In case you don't have `Polygon Mumbai` network in your MetaMask, you can add it by following_ [_this guide_](https://docs.polygon.technology/docs/develop/metamask/config-polygon-on-metamask/)_._
 
-Once you have your wallet connected, you are ready to create your first project. Start by clicking the **CREATE PROJECT** button in top-right corner leading to [the create project page](https://app.feltoken.ai/#/create-project). On this page you need to fill up the form providing basic information about the project:
+### Transaction Fees
 
-* **Name** - name of the project (63 characters max)
-* **Type** - right now there is only one project type
-* **Description** - should describe the project and the expected data type and format
+Right now the app is deployed on Polygon Mumbai testnet. First you will need some MATIC tokens to pay for the transaction fees. You can obtain these using Polygon faucet. Just visit following link and paste your wallet address:
 
-After filling these information, click on **DEPLOY** and follow the process. Make sure you don't close the browser tab throughout the whole process. The deployment consists of three steps.
-
-First you will be asked to provide your public key. This is required to secure exchange of models between data providers and builders. Only you can decrypt things encrypted by your public key.
-
-Second step is deploying the project contract. You will be asked to confirm the transaction which includes paying a transaction fee. The deployment may take a while (<1 min) depending on how busy is the network at the moment.
-
-Final step is registering the deployed project contract into the project manager. This allows displaying you project in the list of projects. Again you have to confirm the transaction and wait for it to be processed.
-
-Once finished you should see an address of your project. You can click on this address and go to the project dashboard. As a project creator, you will be assigned both roles of builder and data provider (inactive data provider).
-
-## Adding Data Providers
-
-In order to add data providers to the project, they first have to request an access to the project. This is done through the project dashboard.
-
-![Empty project dashboard displayed for an user with (default) viewer role.](../.gitbook/assets/brandbird.png)
-
-{% hint style="info" %}
-User refers to a wallet address. In case you don't see the request buttons, make sure that you connected your MetaMask wallet.
-{% endhint %}
-
-At first, a user without data provider role goes to the project dashboard. Here on left side panel in the data provider section is **REQUEST ACCESS** button. After clicking it the request process starts. User will be asked to provide a public key (used for exchanging encrypted models) and send request transaction.
-
-The request then must be accepted by another data provider (e.g. project creator). Accepting request is done through project dashboard as well. Any data provider viewing the dashboard will see a list of request with accept or reject buttons next to them. Rejecting request is fairly straight forward you just click the button and approve the transaction in MetaMask. Accepting request requires one more step. You need to obtain data provider common secret and share it with the new data provider. After clicking the button you need to click **Decrypt** in MetaMask pop-up window and everything else will be handled for you.
-
-### Running Data Provider Code
-
-Finally when you are added as data provider to the project, you need to run a local client which will watch the smart contract and train the models on local data. For this you will first be required to install **Python 3.9+**. Then you can install the client code using `pip` as:
-
-```
-pip install feltoken
-```
-
-In the project dashboard you will be provided with command which you have to run in order to start the client code. It should look something like this (the contract address and chain ID may differ):
-
-```
-felt-node-worker --chain 80001 --contract 0x2249f88C04B09e15B08E722f205d679C6AFC0f4E --account main --data example_data.csv
-```
-
-You have to change the `example_data.csv` to path to your data in CSV format. Right now the code expects simple CSV file using `,` as delimiter without any headers. The last column of the file will be used as **Y** (target values).
-
-In case you want to just test the code you can replace `example_data.csv` with `test`.  This will load demo dataset.
-
-Once the code starts, you will be asked to provide your **private key** (it must be the key associated with data provider account). This is required so that the code can do transaction with the project smart contract. You can follow the instruction for obtaining private key from MetaMask here:
-
-{% embed url="https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key" %}
-Follow the instructions for obtaining private key and paste it to the terminal.
+{% embed url="https://faucet.polygon.technology" %}
+Head to this site to obtain MATIC tokens for paying transaction fees.
 {% endembed %}
 
-Next you will be asked to provide [web3.storage](https://web3.storage/) API token. This token can be obtained for free you just need to register. This token is then used to store encrypted models on IPFS using Filecoin. For more instructions follow:
+You will also need OCEAN tokens to pay for datasets and algorithms. You can collect them through OCEAN faucet by submitting your wallet address here:
 
-{% embed url="https://docs.web3.storage/how-tos/generate-api-token" %}
-Create an account and follow instruction to obtain the API token.
+{% embed url="https://faucet.mumbai.oceanprotocol.com/" %}
+
+## Preparing datasets
+
+For the demonstration of federated learning, let’s image two towns collaborating on analysing housing data. The data might contain sensitive information. Therefore, they can’t fully disclose the data. Each town publishes its dataset on Ocean, allowing only computation over data without direct access. **We will try to predict a house price based on house parameters** (size in square feet, number of bedrooms, bathrooms, material, etc.). Below you can see a demonstration of our data ([original data file](https://github.com/ywchiu/riii/blob/cba34bb9342cb0d283b531f5dc502fc15688078a/data/house-prices.csv)).
+
+{% embed url="https://gist.github.com/Breta01/4c61088296fdeee2481cf33379d0a31e#file-house-prices-example-csv" %}
+Example of house prices dataset. The target column we want to predict (prices) is the last. In data published on Ocean, we also need to remove the header row.
 {% endembed %}
 
-#### Environment Variables (optional)
+We already have the data published on Ocean (using Mumbai chain) as the following assets which we will use in this guide:
 
-In case you plan to run the client code more often, you can store the private key and API token as environment variable. The client code will then automatically used them. You can set these variables as:
+* [did:op:3632e8584837f2eac04d85466c0cebd8b8cb2673b472a82a310175da9730042a](https://market.oceanprotocol.com/asset/did:op:3632e8584837f2eac04d85466c0cebd8b8cb2673b472a82a310175da9730042a)
+* [did:op:cad4a81c9a8e1c1071ccf3e9dea6f8f42d58e100fa3ddf2950c8f0da9e0dda46](https://market.oceanprotocol.com/asset/did:op:cad4a81c9a8e1c1071ccf3e9dea6f8f42d58e100fa3ddf2950c8f0da9e0dda46)
 
-```
-export PRIVATE_KEY='0xc...'
-export WEB3_STORAGE_TOKEN='ab...'
-```
+### Data Format <a href="#6b53" id="6b53"></a>
 
-## Training Machine Learning Models
+For using FELT with your own data, you will first need to have data in the correct data format. Right now, we support only **CSV format**. With the following rules:
 
-If you want to create a training plan for training a model, you must have a builder role. The builder role can be obtained in similar way as a data provider role by requesting access in the project dashboard. The builder role is automatically given to the creator of the project. Once you have the appropriate role, you can click **CREATE MODEL** button which will bring you to the training plan definition page.
+* CSV contains only numerical data
+* The last column is the target column
+* Remove header row from data
+* All datasets used during training must have the same number of columns
+
+You can check this file [`house-prices-part1.csv`](https://gist.github.com/Breta01/a8482d3cae0c257e9a7394ca72fdb281) which is used in this article. For more details about publishing your datasets on the Ocean marketplace, please read:
+
+{% embed url="https://docs.oceanprotocol.com/using-ocean-market/marketplace-publish-data-asset" %}
 
 {% hint style="info" %}
-There must be at least one active data provider before you can create the training plan.
+If you are using your data, don’t forget to allow the “Local Training — FELT” algorithm or just all published algorithms.
 {% endhint %}
 
-When defining a training plan there is multiple fields you need to define:
+## Starting Local Training <a href="#901e" id="901e"></a>
 
-* **Model** - models are stored on IPFS and only their reference (CID) is stored in the training plan. You have to options how to pick the training model. Currently we support only **scikit-learn** library
-  * **Predefined model** - option number one is to pick one of predefined models (recommended)
-  * **Custom model** - you can defined your own model, export it using joblib and upload it to IPFS. Then you just need to provide CID of your model (more on this in separate guide...)
-* **Number of round** - one round consists of each data provider training the model and averaging all the models. This process can be repeated multiple times to achieve the best results.
-* **Node reward** - node reward is given to each node after completing one round (at the moment just leave it `0` as you need FELTokens to send these rewards)
+Now when we have our data ready. It’s time to start the training! Head to the [app.feltoken.ai](https://app.feltoken.ai/). Before you begin, you will need to connect your MetaMask account. So click on **Connect** button in the top-right corner. Make sure that in MetaMask, you are connected to the correct account and Mumbai testnet.
 
-After filling these information you can click **DEPLOY** button. You will then have to approve the transaction in MetaMask and that's it. You created the training plan which will now be executed by the data providers. You can watch the progress of the training plan in the project dashboard.
-
-_Currently there can be only one training plan executed at the same time._
-
-## Using Final Model
-
-If you created a plan, you can watch it in the project dashboard. Once the plan is finished, you should see a download button next to it (this is only available to builder who created the training plan).
-
-![Downloading model from project dashboard.](../.gitbook/assets/brandbird2.png)
-
-By clicking the **DOWNLOAD** button you will obtain the model. The model is encrypted. Before the download starts, you will see a MetaMask pop-up asking you to decrypt the data (the model). After approving the decryption, you should receive `model.joblib` file. In your Python code, you can use this file as follows:
+Then you will see a short form where you must fill in the name of training (you can pick an arbitrary one). Then you fill in the DIDs of data; for our demo, you can use:
 
 ```
-import numpy as np
-import joblib
-
-# Load the model, use the correct path to the model.joblib file
-model = joblib.load("model.joblib")
-
-# X should contain the data you want to use for prediction
-X = np.array([...])
-result = model.predict(X)
+did:op:3632e8584837f2eac04d85466c0cebd8b8cb2673b472a82a310175da9730042a
+did:op:cad4a81c9a8e1c1071ccf3e9dea6f8f42d58e100fa3ddf2950c8f0da9e0dda46
 ```
 
-**Important:** In order to run this code you need correct version of the joblib and scikit-learn libraries. You can find these in [felt package requirements](https://github.com/FELToken/feltoken.py/blob/main/requirements.txt).
+Finally, you will pick `Linear Regression` as the model to train.
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Screenshot of how the form should look before you hit Submit button.</p></figcaption></figure>
+
+### Approving Transactions <a href="#4d63" id="4d63"></a>
+
+Once you hit **Submit** button, you will see a progress bar. You will have to approve a few transactions using MetaMask to start the training. Here is the list of all transactions you will have to confirm:
+
+1. Approve OCEAN token spend to purchase the dataset
+2. Purchase the dataset _(now approve and purchase are separate transactions)_
+3. Approve OCEAN token spend to purchase FELT algorithm for training
+4. Purchase the algorithm
+5. Sign request to start the compute job (training)
+
+You have to start separate training for each DID; therefore, you will have to approve the set of the above transactions twice.
+
+<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption><p>Screenshot from starting training and approving transactions through MetaMask.</p></figcaption></figure>
+
+## Starting Aggregation <a href="#78b8" id="78b8"></a>
+
+Once you start the local training, you can go to [launched jobs page](https://app.feltlabs.ai/jobs) (you can use **Launched jobs** button). Here you can monitor the compute job progress. You have to click the **Reload** button to get the latest status. Once both jobs finish, you can start the aggregation (**Aggregate** button).
+
+<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption><p>Display of launched jobs; starting aggregation once local training is completed.</p></figcaption></figure>
+
+After starting the aggregation, the progress bar will pop up. You will have to approve some transactions once again:
+
+1. Sign URLs to access local models
+2. Approve OCEAN token to pay for provider fees
+3. Order dataset for the compute job
+4. Approve OCEAN token spend to purchase FELT algorithm for aggregation
+5. Purchase the algorithm
+6. Sign request to start the compute job (aggregation)
+
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+## Use Final Model <a href="#93d9" id="93d9"></a>
+
+You can watch aggregation progress. Once it finishes, you will see the **Download final model** button. You will sign the request and download the final model (in our case `final-model-House Prices.json`). The file is not a standard machine learning file format. You will have to use the FELT library to import it.
+
+First, you have to install the [FELT python library](https://github.com/FELT-Labs/feltlabs.py) using pip (it requires **Python 3.9 or newer**):
 
 ```
-joblib==1.1.0
-numpy==1.21.0
-scikit-learn==1.0.1
+pip install feltlabs==0.2.6
 ```
+
+Then you can load the model using `feltlabs.model.load_model(model_path)` function. This function will take the path of the model file as an argument and return the standard [scikit-learn model](https://scikit-learn.org/stable/modules/generated/sklearn.linear\_model.LinearRegression.html) object. You can check the following code for sample usage:
+
+{% embed url="https://gist.github.com/Breta01/96f9c3783e18260bb6b512b1c3f94a68#file-felt-load-model-py" %}
+
+That’s it. You just trained your first model on a distributed dataset! Now it’s up to your imagination to find projects where you can use this technology.
 
 ## Conclusion
 

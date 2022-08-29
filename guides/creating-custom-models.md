@@ -1,21 +1,9 @@
 # Creating Custom Models
 
-Defining a custom model is relatively simple. First, you have to install `felt` pip package (this guide was created for version `0.1.0`):
+Right now FELT supports only predefined models. Over time we will add more models and ability to tune hyperparameters. If you require certain model type, you can create an issue here:
 
-```
-pip install feltoken
-```
-
-Then you will need to define API token for the web3.storage as an environment variable:
-
-```
-export WEB3_STORAGE_TOKEN='ab...'
-```
-
-Then you just need to pick a model from scikit-learn. For example, here we will use linear regression with L2 regularization setting the custom value of alpha. After defining the model you just need to pass it to `upload_model(model)` function.&#x20;
-
-{% embed url="https://gist.github.com/Breta01/aed22dfd6c46e4fbd0690796549f4d7d#file-defining-custome-model-py" %}
-Short script for defining a model and printing the CID.
+{% embed url="https://github.com/FELT-Labs/feltlabs.py/issues" %}
+Here you can create issue - requesting model type
 {% endembed %}
 
-Then just run the code and it will return the model CID which you can then use in web application during training plan definition.
+If you request certain model type, we will try to prioritize adding it to our application.

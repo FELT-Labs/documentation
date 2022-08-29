@@ -1,25 +1,31 @@
 # Using Final Models
 
-Right now FELToken supports only **scikit-learn** models. Models are exported using **joblib** library. That means that you need correct version of the **joblib** and **scikit-learn** libraries. You can find these in [felt package requirements](https://github.com/FELToken/feltoken.py/blob/main/requirements.txt).
+Right now FELToken supports only **scikit-learn** models. FELT is using custom format (based on JSON) for storing and exchanging the models. When you finish the training, you will download your final model file (e.g. `final-model-House Prices.json`).
+
+In order to use it, you have to install the [FELT python library](https://github.com/FELT-Labs/feltlabs.py) using pip (it requires **Python 3.9 or newer**, the Python 3.9 is recommended):
 
 ```
-joblib==1.1.0
-numpy==1.21.0
-scikit-learn==1.0.1
+jpip install feltlabs
 ```
 
-If you created a plan, you can watch it in the project dashboard. Once the plan is finished, you should see a download button next to it (this is only available to builder who created the training plan). By clicking the **DOWNLOAD** button you will obtain the model. The model is encrypted. Before the download starts, you will see a MetaMask pop-up asking you to decrypt the data (the model). After approving the decryption, you should receive `model.joblib` file. In your Python code, you can use this file as follows:
+Then you can load the model using `feltlabs.model.load_model(model_path)` function. This function will take the path of the model file as an argument and return the standard [scikit-learn model](https://scikit-learn.org/stable/modules/generated/sklearn.linear\_model.LinearRegression.html) object. You can check the following code for sample usage:
+
+{% embed url="https://gist.github.com/Breta01/96f9c3783e18260bb6b512b1c3f94a68#file-felt-load-model-py" %}
+
+### Converting FELT format to Python Pickle format
+
+You can convert FELT model format into standard pickle file. This file will then contain pickled object of scikit-learn model. FELT library provides easy command for that. After installing `feltlabs.py` library, you can run:
 
 ```
-import numpy as np
-import joblib
-
-# Load the model, use the correct path to the model.joblib file
-model = joblib.load("model.joblib")
-
-print("Model details:", model.__dict__)
-
-# X should contain the data you want to use for prediction
-X = np.array([...])
-result = model.predict(X)
+felt-export --input "final-model-House Prices.json" --output "model.pkl"
 ```
+
+Then you can use the created file as follows:
+
+<pre class="language-python"><code class="lang-python"><strong>import pickle
+</strong><strong>
+</strong><strong>with open('model.pkl', 'rb') as f:
+</strong>    model = pickle.load(object, f)
+    
+# See the above code example for data definition
+model.predict(data)</code></pre>
