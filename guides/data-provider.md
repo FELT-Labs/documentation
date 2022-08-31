@@ -19,11 +19,11 @@ For using FELT with your own data, you will first need to have data in the corre
 * Remove header row from data
 * All datasets used during training must have the same number of columns
 
-You can check this file [`house-prices-part1.csv`](https://gist.github.com/Breta01/a8482d3cae0c257e9a7394ca72fdb281) for example data file (**last column is target column** other columns are used as features).
+You can check this file [`house-prices-part1.csv`](https://gist.github.com/Breta01/a8482d3cae0c257e9a7394ca72fdb281) for an example of a data file (**the last column is the target column** other columns are used as features).
 
 ### Publishing data
 
-Publishing data can be done through Ocean marketplace. The web application will walk you through the whole process. For more details please read:
+Publishing data can be done through Ocean marketplace. The web application will walk you through the whole process. For more details, please read:
 
 {% embed url="https://docs.oceanprotocol.com/using-ocean-market/marketplace-publish-data-asset" %}
 

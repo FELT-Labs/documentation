@@ -2,7 +2,7 @@
 description: From creating project to model training.
 ---
 
-# Getting Started
+# Complete Getting Started
 
 In this guide, we will use a sample problem to go over all steps necessary for federated learning with FELT. This process consists of:
 
@@ -89,7 +89,7 @@ did:op:cad4a81c9a8e1c1071ccf3e9dea6f8f42d58e100fa3ddf2950c8f0da9e0dda46
 
 Finally, you will pick `Linear Regression` as the model to train.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Screenshot of how the form should look before you hit Submit button.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption><p>Screenshot of how the form should look before you hit Submit button.</p></figcaption></figure>
 
 ### Approving Transactions <a href="#4d63" id="4d63"></a>
 

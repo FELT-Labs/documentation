@@ -16,8 +16,8 @@ Data scientist is the person picking datasets and running machine learning on th
 
 For more details read:
 
-{% content-ref url="guides/builder-data-scientist.md" %}
-[builder-data-scientist.md](guides/builder-data-scientist.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
 ### Data Provider

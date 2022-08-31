@@ -6,15 +6,15 @@
 
 ## Guides
 
-* [Getting Started](guides/getting-started.md)
+* [Complete Getting Started](guides/getting-started.md)
 * [Data Provider](guides/data-provider.md)
-* [Data Scientist](guides/builder-data-scientist.md)
 * [Using Final Models](guides/using-final-models.md)
 * [Creating Custom Models](guides/creating-custom-models.md)
 
 ## Fundamentals
 
 * [Federated Learning](fundamentals/federated-learning.md)
+* [FELT Architecture](fundamentals/felt-architecture.md)
 
 ## Use Cases
 

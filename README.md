@@ -48,8 +48,8 @@ Follow our handy guides to get started on the basics as quickly as possible:
 [data-provider.md](guides/data-provider.md)
 {% endcontent-ref %}
 
-{% content-ref url="guides/builder-data-scientist.md" %}
-[builder-data-scientist.md](guides/builder-data-scientist.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
 ### Fundamentals: Dive a little deeper
