@@ -6,7 +6,7 @@ FELT consists of two main components: FELT application and algorithms. You can f
 
 ## Algorithms
 
-Algorithms are assets published on Ocean protocol. In general, algorithms are Docker containers that receive dataset(s) from Ocean protocol, execute some code and return results. FELT uses two main algorithms:
+Algorithms are assets published on Ocean protocol. In general, algorithms are Docker containers that receive dataset(s) from Ocean protocol, execute some code and return results. This is possible using Ocean [compute-to-data](https://oceanprotocol.com/technology/compute-to-data) technology. FELT uses two main algorithms:
 
 * **Local training algorithm** - for training machine learning models on data
 * **Aggregation algorithm** - for combining outputs of local training into a single output
