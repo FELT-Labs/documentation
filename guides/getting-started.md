@@ -132,12 +132,34 @@ First, you have to install the [FELT python library](https://github.com/FELT-Lab
 pip install feltlabs==0.2.6
 ```
 
-Then you can load the model using `feltlabs.model.load_model(model_path)` function. This function will take the path of the model file as an argument and return the standard [scikit-learn model](https://scikit-learn.org/stable/modules/generated/sklearn.linear\_model.LinearRegression.html) object. You can check the following code for sample usage:
+Then you can load the model using `feltlabs.model.load_model(model_path)` function. This function will take the path of the model file as an argument and return the model object. Right now we support two types of model: federated learning and federated analytics. The behaviour of each is slightly different.
+
+#### Federated Learning - Scikit-learn Model
+
+When using the federated learning option and importing the model using `load_model(...)` function. The function returns the model, which can be used as a standard [scikit-learn model](https://scikit-learn.org/stable/modules/generated/sklearn.linear\_model.LinearRegression.html) object. The model can then be used for prediction using the function `model.predict(data)`. You can check the following code for sample usage:
 
 {% embed url="https://gist.github.com/Breta01/96f9c3783e18260bb6b512b1c3f94a68#file-felt-load-model-py" %}
 
 That’s it. You just trained your first model on a distributed dataset! Now it’s up to your imagination to find projects where you can use this technology.
 
+#### Federated Analytics Models
+
+Similarly to federated learning models, these models can be loaded using `load_model(...)` a function. This time you don't have to pass any data to the model, and you can obtain calculated value (of sum, mean, variance, or std) using the `model.predict(None)` function. See the example below:
+
+```
+# Using version: 0.3.0
+from feltlabs.model import load_model
+
+# Load model
+model = load_model("final-model-mean.json")
+# Call predict function without any input
+mean = model.predict(None)
+print(mean)
+# This will print the value of mean calculated by the model
+```
+
+&#x20;
+
 ## Conclusion
 
-These should be the main parts for getting started with the FELToken. In following guides you might find more detailed instructions for specific tasks.
+These should be the main parts for getting started with the FELToken. In the following guides, you might find more detailed instructions for specific tasks.
