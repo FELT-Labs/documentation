@@ -20,7 +20,7 @@ When using the federated learning option and importing the model using `load_mod
 
 Similarly to federated learning models, these models can be loaded using `load_model(...)` a function. This time you don't have to pass any data to the model, and you can obtain calculated value (of sum, mean, variance, or std) using the `model.predict(None)` function. See the example below:
 
-```
+```python
 # Using version: 0.3.0
 from feltlabs.model import load_model
 
@@ -42,10 +42,12 @@ felt-export --input "final-model-House Prices.json" --output "model.pkl"
 
 Then you can use the created file as follows:
 
-<pre class="language-python"><code class="lang-python"><strong>import pickle
-</strong><strong>
-</strong><strong>with open('model.pkl', 'rb') as f:
-</strong>    model = pickle.load(object, f)
+```python
+import pickle
+
+with open('model.pkl', 'rb') as f:
+    model = pickle.load(object, f)
     
 # See the above code example for data definition
-model.predict(data)</code></pre>
+model.predict(data)yth
+```

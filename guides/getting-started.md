@@ -146,7 +146,7 @@ Thatâ€™s it. You just trained your first model on a distributed dataset! Now itâ
 
 Similarly to federated learning models, these models can be loaded using `load_model(...)` a function. This time you don't have to pass any data to the model, and you can obtain calculated value (of sum, mean, variance, or std) using the `model.predict(None)` function. See the example below:
 
-```
+```python
 # Using version: 0.3.0
 from feltlabs.model import load_model
 
