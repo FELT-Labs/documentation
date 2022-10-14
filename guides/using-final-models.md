@@ -5,7 +5,7 @@ Right now FELToken supports only **scikit-learn** models. FELT is using custom f
 In order to use it, you have to install the [FELT python library](https://github.com/FELT-Labs/feltlabs.py) using pip (it requires **Python 3.9 or newer**, the Python 3.9 is recommended):
 
 ```
-jpip install feltlabs
+pip install feltlabs
 ```
 
 Then you can load the model using `feltlabs.model.load_model(model_path)` function. This function will take the path of the model file as an argument and return the model object. Right now, we support two types of models: federated learning and federated analytics. The behaviour of each is slightly different.

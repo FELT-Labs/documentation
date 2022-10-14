@@ -129,7 +129,7 @@ You can watch aggregation progress. Once it finishes, you will see the **Downloa
 First, you have to install the [FELT python library](https://github.com/FELT-Labs/feltlabs.py) using pip (it requires **Python 3.9 or newer**):
 
 ```
-pip install feltlabs==0.2.6
+pip install feltlabs==0.3.0
 ```
 
 Then you can load the model using `feltlabs.model.load_model(model_path)` function. This function will take the path of the model file as an argument and return the model object. Right now we support two types of model: federated learning and federated analytics. The behaviour of each is slightly different.
