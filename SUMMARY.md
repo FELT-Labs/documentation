@@ -9,6 +9,7 @@
 * [Complete Getting Started](guides/getting-started.md)
 * [Data Provider](guides/data-provider.md)
 * [Using Final Models](guides/using-final-models.md)
+* [Automation](guides/automation.md)
 * [Creating Custom Models](guides/creating-custom-models.md)
 
 ## Fundamentals

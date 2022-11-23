@@ -32,9 +32,17 @@ Key benefits of FELT:
 
 ## Getting Started
 
-**Got 5 minutes?**&#x20;
+**Have 2 minutes?**&#x20;
+
+{% embed url="https://youtu.be/gRqWCdeTIDo" %}
+FELT Labs promotion video.
+{% endembed %}
+
+**Have 5 minutes?**&#x20;
 
 {% embed url="https://www.youtube.com/watch?v=CFfmLdYtz4s&t=5s" %}
+Presentation of FELT Labs architecture
+{% endembed %}
 
 ### Guides: Jump right in
 
@@ -48,10 +56,6 @@ Follow our handy guides to get started on the basics as quickly as possible:
 [data-provider.md](guides/data-provider.md)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}
-
 ### Fundamentals: Dive a little deeper
 
 Learn the fundamentals of FELT to get a deeper understanding of our main features:
@@ -60,6 +64,6 @@ Learn the fundamentals of FELT to get a deeper understanding of our main feature
 [federated-learning.md](fundamentals/federated-learning.md)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="fundamentals/felt-architecture.md" %}
+[felt-architecture.md](fundamentals/felt-architecture.md)
 {% endcontent-ref %}
