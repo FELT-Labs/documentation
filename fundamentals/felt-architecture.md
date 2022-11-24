@@ -2,7 +2,13 @@
 
 FELT consists of two main components: FELT application and algorithms. You can find the application at [app.feltlabs.ai](https://app.feltlabs.ai/). The rest of this page will focus on the algorithms and inner workings of the application.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>The FELT application is interacting with Ocean protocol. It starts compute jobs and retrieve results.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption><p>The FELT application is interacting with Ocean protocol. It starts compute jobs and retrieve results.</p></figcaption></figure>
+
+### Video presentation
+
+{% embed url="https://www.youtube.com/watch?v=CFfmLdYtz4s" %}
+Video from one of our presentations. Presenting FELT architecture.
+{% endembed %}
 
 ## Algorithms
 
@@ -25,7 +31,7 @@ In order to run this dataset, the dataset author must first approve to run this 
 
 Consequently, each local training algorithm receives a data and model type definition (JSON object). Based on the model definition, the algorithm initializes the model and trains it on the data.
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption><p>For each dataset we start compute job which outputs the local model.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (2).png" alt=""><figcaption><p>For each dataset we start compute job which outputs the local model.</p></figcaption></figure>
 
 Once the training finishes, the algorithm outputs an encrypted model. The model is encrypted in the following way:
 
@@ -40,7 +46,7 @@ On the other hand, the aggregation algorithm receives models with random values.
 
 Once the local training finishes, a user can pick models from local training and start the aggregation. The aggregation algorithm first decrypts the models and performs the aggregation. At the moment, we do the aggregation by averaging over model weights (more types of aggregation will be possible in the future).
 
-<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption><p>The algorithm takes outputs of local training and creates one single model out of them.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8) (1).png" alt=""><figcaption><p>The algorithm takes outputs of local training and creates one single model out of them.</p></figcaption></figure>
 
 The aggregation algorithm owns a private key, which is used for decrypting outputs of local training. However, the aggregation doesn't know the random noise which was added to models, so the true values of model parameters are kept secret. The aggregation then outputs one final model (we call this **global model**).
 

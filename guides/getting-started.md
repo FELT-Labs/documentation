@@ -90,20 +90,26 @@ If you are using your data, don’t forget to allow the “Local Training — FE
 
 Now that we have our data ready. It’s time to start the training! Head to the [app.feltoken.ai](https://app.feltoken.ai/). Before you begin, you will need to connect your MetaMask account. So click on **Connect** button in the top-right corner. Make sure that in MetaMask, you are connected to the correct account and Mumbai testnet.
 
-Then you will see a short form where you must fill in the name of training (you can pick an arbitrary one). Then you fill in the DIDs of data; for our demo, you can use:
+Then you will select between training on single dataset or on multiple datasets. For our case we will use the **multiple datasets** option. In the first step you must fill in the name of training (you can pick an arbitrary one). Then you fill in the DIDs of data; for our demo, you can use:
 
 ```
 did:op:3632e8584837f2eac04d85466c0cebd8b8cb2673b472a82a310175da9730042a
 did:op:cad4a81c9a8e1c1071ccf3e9dea6f8f42d58e100fa3ddf2950c8f0da9e0dda46
 ```
 
-Finally, you will pick `Linear Regression` as the model to train.
+<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption><p>Screenshot of how the form should look before you go to next step.</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption><p>Screenshot of how the form should look before you hit Submit button.</p></figcaption></figure>
+Then you proceed to the next step, where you select the model. Right now, you can pick from scikit-learn models or calculations of basic statics (mean, variance...). For our case we can pick any regression model, for example **Ridge regression**.
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Selection of model, you can pick from multiple model types.</p></figcaption></figure>
+
+In the final step you can pick hyperparameters of your model. One of the most important options is to pick **target column index**. This is the index representing column which we want to predict. Setting value to -1 will use the last column. You can click on submit once you select you hyperparameters.
+
+<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption><p>Picking parameters for the selected model. Target column set to -1 means that we want to predict the last column.</p></figcaption></figure>
 
 ### Approving Transactions <a href="#4d63" id="4d63"></a>
 
-Once you hit **Submit** button, you will see a progress bar. You will have to approve a few transactions using MetaMask to start the training. Here is the list of all transactions you will have to confirm:
+Once you hit **Submit** button, you will see a progress bar. You will have to approve a few transactions using MetaMask to start the training. **This is only neccessary if you didn't activate the automation.** Here is the list of all transactions you will have to confirm:
 
 1. Approve OCEAN token spend to purchase the dataset
 2. Purchase the dataset _(now approve and purchase are separate transactions)_
@@ -113,15 +119,17 @@ Once you hit **Submit** button, you will see a progress bar. You will have to ap
 
 You have to start separate training for each DID; therefore, you will have to approve the set of the above transactions twice.
 
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption><p>Screenshot from starting training and approving transactions through MetaMask.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1).png" alt=""><figcaption><p>Screenshot from starting training and approving transactions through MetaMask.</p></figcaption></figure>
 
 ## Starting Aggregation <a href="#78b8" id="78b8"></a>
 
-Once you start the local training, you can go to [launched jobs page](https://app.feltlabs.ai/jobs) (you can use **Launched jobs** button). Here you can monitor the compute job progress. You have to click the **Reload** button to get the latest status. Once both jobs finish, you can start the aggregation (**Aggregate** button).
+Once you start the local training, you can go to [launched jobs page](https://app.feltlabs.ai/jobs) (you can use **Launched jobs** button). Here you can monitor the compute job progress. You have to click the **Reload** button to get the latest status.
 
-<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption><p>Display of launched jobs; starting aggregation once local training is completed.</p></figcaption></figure>
+Once both jobs finish, you can start the aggregation. On right side of each local training you have check box which you can use to select which local trainings should be aggregated (you need to select at least 2). After selecting jobs to aggregate, you can click **Aggregate** button and start the aggregation.
 
-After starting the aggregation, the progress bar will pop up. You will have to approve some transactions once again:
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Displaying job status; selecting jobs to aggregate and starting the aggregation.</p></figcaption></figure>
+
+After starting the aggregation, the progress bar will pop up. You will have to approve some transactions once again (**if you didn't activate the automation**):
 
 1. Sign URLs to access local models
 2. Approve OCEAN token to pay for provider fees
@@ -130,7 +138,7 @@ After starting the aggregation, the progress bar will pop up. You will have to a
 5. Purchase the algorithm
 6. Sign request to start the compute job (aggregation)
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Use Final Model <a href="#93d9" id="93d9"></a>
 
@@ -172,4 +180,4 @@ print(mean)
 
 ## Conclusion
 
-These should be the main parts for getting started with the FELToken. In the following guides, you might find more detailed instructions for specific tasks.
+These should be the main parts for getting started with the FELT. In the following guides, you might find more detailed instructions for specific tasks.
