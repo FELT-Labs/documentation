@@ -2,6 +2,8 @@
 
 When opening [the FELT application](https://app.feltlabs.ai/), you will have the option to select between **single** and **multi**-dataset training. This will determine the following process of training.
 
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Initial screen of FELT applicationa when selecting between single and multiple datasets option.</p></figcaption></figure>
+
 ## Starting Training
 
 The start of the training is the same for both options. The only difference is that in the case of the single dataset training, you have to provide one DID (dataset id), and for multiple datasets, you have to provide at least 2 DIDs. The rest of the training setup is the same, you will pick a model, select hyperparameters, and start training. Once the training starts, you can go to [the Launched jobs section](https://app.feltlabs.ai/jobs) of the application to view the results. That's the part where things start to differ.

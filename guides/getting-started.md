@@ -101,7 +101,7 @@ did:op:cad4a81c9a8e1c1071ccf3e9dea6f8f42d58e100fa3ddf2950c8f0da9e0dda46
 
 Then you proceed to the next step, where you select the model. Right now, you can pick from scikit-learn models or calculations of basic statics (mean, variance...). For our case we can pick any regression model, for example **Ridge regression**.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Selection of model, you can pick from multiple model types.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption><p>Selection of model, you can pick from multiple model types.</p></figcaption></figure>
 
 In the final step you can pick hyperparameters of your model. One of the most important options is to pick **target column index**. This is the index representing column which we want to predict. Setting value to -1 will use the last column. You can click on submit once you select you hyperparameters.
 
