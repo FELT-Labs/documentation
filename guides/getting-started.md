@@ -97,7 +97,7 @@ did:op:3632e8584837f2eac04d85466c0cebd8b8cb2673b472a82a310175da9730042a
 did:op:cad4a81c9a8e1c1071ccf3e9dea6f8f42d58e100fa3ddf2950c8f0da9e0dda46
 ```
 
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption><p>Screenshot of how the form should look before you go to next step.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1).png" alt=""><figcaption><p>Screenshot of how the form should look before you go to next step.</p></figcaption></figure>
 
 Then you proceed to the next step, where you select the model. Right now, you can pick from scikit-learn models or calculations of basic statics (mean, variance...). For our case we can pick any regression model, for example **Ridge regression**.
 
@@ -119,7 +119,7 @@ Once you hit **Submit** button, you will see a progress bar. You will have to ap
 
 You have to start separate training for each DID; therefore, you will have to approve the set of the above transactions twice.
 
-<figure><img src="../.gitbook/assets/image (6) (1).png" alt=""><figcaption><p>Screenshot from starting training and approving transactions through MetaMask.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption><p>Screenshot from starting training and approving transactions through MetaMask.</p></figcaption></figure>
 
 ## Starting Aggregation <a href="#78b8" id="78b8"></a>
 

@@ -7,6 +7,7 @@
 ## Guides
 
 * [Complete Getting Started](guides/getting-started.md)
+* [Single or Multi Dataset Training](guides/single-or-multi-dataset-training.md)
 * [Data Provider](guides/data-provider.md)
 * [Using Final Models](guides/using-final-models.md)
 * [Automation](guides/automation.md)

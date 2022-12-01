@@ -2,7 +2,7 @@
 
 FELT consists of two main components: FELT application and algorithms. You can find the application at [app.feltlabs.ai](https://app.feltlabs.ai/). The rest of this page will focus on the algorithms and inner workings of the application.
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption><p>The FELT application is interacting with Ocean protocol. It starts compute jobs and retrieve results.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (2).png" alt=""><figcaption><p>The FELT application is interacting with Ocean protocol. It starts compute jobs and retrieve results.</p></figcaption></figure>
 
 ### Video presentation
 
