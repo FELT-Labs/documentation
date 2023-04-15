@@ -49,5 +49,5 @@ with open('model.pkl', 'rb') as f:
     model = pickle.load(object, f)
     
 # See the above code example for data definition
-model.predict(data)yth
+model.predict(data)
 ```
