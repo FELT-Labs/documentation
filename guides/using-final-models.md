@@ -21,7 +21,6 @@ When using the federated learning option and importing the model using `load_mod
 Similarly to federated learning models, these models can be loaded using `load_model(...)` a function. This time you don't have to pass any data to the model, and you can obtain calculated value (of sum, mean, variance, or std) using the `model.predict(None)` function. See the example below:
 
 ```python
-# Using version: 0.3.0
 from feltlabs.model import load_model
 
 # Load model
