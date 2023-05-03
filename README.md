@@ -1,6 +1,6 @@
 # What is FELT Labs?
 
-FELT Labs is a set of tools for running federated learning on Ocean protocol. Ocean protocol is a data marketplace where data owners can sell their data. We allow you to pick datasets from Ocean (any number of them) and train machine learning models or run data analytics across all of them. We also guarantee to preserve data privacy so that individual data aren't revealed. The core of FELT Labs is the algorithms for running the training on data and the web application, allowing people to start the algorithms easily.
+FELT Labs is a data sciense company. We are providing a set of tools for doing data sciencse on private and distributed data. Currently we are focusing on federated learning on top of the Ocean Protocol. Ocean creates tools for web3 data economy. We allow you to pick datasets from Ocean (any number of them) and train machine learning models or run data analytics across all of them. We also guarantee to preserve data privacy so that individual data aren't revealed. The core of FELT Labs is our web application, allowing users to run the whole process of training seamlessly.
 
 ### Federated Learning & How FELT Works
 
@@ -17,7 +17,7 @@ There are many applications where companies/individuals can make use of federate
 * Ecommerce providing better products to customers
 {% endhint %}
 
-FELT makes this process simple by providing our own algorithms for training the models and then aggregating them. We rely on Ocean protocol to handle everything around data management. All models are encrypted during the exchange, so only approved parties can use them. Data scientists can pick any compatible data published on Ocean protocol and use them for training. Finally, data providers can set prices on their data and get paid for providing their data.
+FELT makes this process simple by providing our own algorithms for training the models and then aggregating them. We rely on Ocean protocol to handle everything around data management. All models are encrypted during the exchange, so only approved parties can use them. Data scientists can pick any compatible data published on Ocean protocol and use them for training. They can use algorithms provided by FELT or even create algorithms for their specific use-case and then simple run them through FELT. Finally, data providers can set prices on their data and get paid for providing their data.
 
 _There are multiple approaches to federated learning. At the moment, FELT implements only one of them, but we have plans to extend this in the future._
 
@@ -27,8 +27,8 @@ Key benefits of FELT:
 
 1. **Secure** - all data remains securely on the data provider machine. Architecture is protected by a blockchain network.
 2. **Encrypted** - all trained models are encrypted and exchanged only between interested parties.
-3. **Reach** - any data published on Ocean marketplace can be used with FELT tool.
-4. **Rewards** - data providers get rewards for participating in projects.
+3. **Easy** - running the whole process is very simple.
+4. **Rewards** - data providers get rewards for providing data.
 
 ## Getting Started
 

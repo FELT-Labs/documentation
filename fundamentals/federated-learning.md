@@ -13,6 +13,6 @@ There are many applications where companies/individuals can make use of federate
 * Ecommerce providing better products to customers&#x20;
 {% endhint %}
 
-FELT makes this process simple by providing our own algorithms for training the models and then aggregating them. We rely on Ocean protocol to handle everything around data management. All models are encrypted during the exchange, so only approved parties can use them. Data scientists can pick any compatible data published on Ocean protocol and use them for training. Finally, data providers can set prices on their data and get paid for providing their data.
+FELT makes this process simple by providing our own algorithms for training the models and then aggregating them. We rely on Ocean protocol to handle everything around data management. All models are encrypted during the exchange, so only approved parties can use them. Data scientists can pick any compatible data published on Ocean protocol and use them for training. They can use algorithms provided by FELT or even create algorithms for their specific use-case and then simple run them through FELT. Finally, data providers can set prices on their data and get paid for providing their data.
 
 _There are multiple approaches to federated learning. At the moment, FELT implements only one of them, but we have plans to extend this in the future._
