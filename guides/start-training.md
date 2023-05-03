@@ -1,12 +1,26 @@
 ---
-description: Guide to using Activate Automation option in web application.
+description: Ways how to start training in FELT.
 ---
 
-# Automation
+# Start training
+
+FELT provides 3 ways how to start the training
+- Browser flow
+  - manually signing transations through your wallet
+  - Auto-Sign
+- Python flow
+
+Let's go through each of them.
+
+## Browser flow with wallet signing
 
 Any transaction on a blockchain has to be approved through your wallet. This ensures higher security, but it can slow things down when needing to approve multiple transactions. In the FELT application, you can choose between approving every transaction or using automation. Automating transactions makes the training process smoother. This tutorial will first explain how to set up the automation and then explain how it works underneath.
 
-## Activating Automation
+## Browser flow with Auto-Sign
+
+Instead of manually signing transactions, you can use the Auto-Sign feature. This feature will automatically sign all transactions using separated account. This makes the training process smoother. This tutorial will first explain how to set up the Auto-Sign and then explain how it works underneath.
+
+### Activating Automation
 
 To activate the automation, you have to go to [app.feltlabs.ai](https://app.feltlabs.ai/) and do the following steps:
 
@@ -36,3 +50,11 @@ The account will be encrypted and automatically stored in the storage of your br
 The automation generates a separate blockchain address and private key, we will call this automation account. The application can then use the private key to automatically sign the necessary transactions. The automation account (private key) never leaves your computer, and all transactions are signed locally. However, for security reasons, we still recommend topping up only funds necessary for training.
 
 The automation account is encrypted using an account stored in MetaMask and then stored in the local storage of your browsers. So anytime you want to restore the automation account, you have to decrypt it using MetaMask. This ensures a higher level of security as the potential leak of local storage only leaks the encrypted account. However, anyone with access to your MetaMask account can also decrypt your automation account.
+
+## Python flow
+
+Python flow is the most simple and secure way how to start training. It allows you to use any wallet account. This account is not shared with anyone. It is used to automatically sign transactions through python. 
+
+Instruction how to set it up can be found here:
+
+{% embed url="https://github.com/FELT-Labs/python-flow" %}

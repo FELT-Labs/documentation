@@ -2,9 +2,9 @@
 
 FELT Labs currently offers one algorithm that can be used to train certain types of machine learning models or perform data analytics on CSV data. However, if you have a specific use case that requires a different algorithm, we offer two options.
 
-Firstly, you can tell us what you need and we can create a custom algorithm for you. Once the algorithm is developed, you will be able to easily run it on your data. To request a custom algorithm, you can reach out to us on our Discord channel and provide us with the details of your use case.
+First option, you can tell us what you need and we can create a custom algorithm for you. Once the algorithm is developed, you will be able to easily run it on your data. To request a custom algorithm, you can reach out to us on our Discord channel and provide us with the details of your use case.
 
-Alternatively, you can build your own algorithm. We provide instructions on how to do this in the following sections of our documentation. We encourage you to let us know if you decide to build your own algorithm, so that we can assist you and ensure that the final product meets your needs.
+Second option, you can build your own algorithm. We provide instructions on how to do this in the following sections of our documentation. We encourage you to let us know if you decide to build your own algorithm, so that we can assist you and ensure that the final product meets your needs.
 
 Overall, our goal is to provide our users with flexible options for using our platform and to ensure that they are able to achieve their specific data analysis and machine learning objectives, whether that involves using our pre-existing algorithm or developing a custom solution.
 

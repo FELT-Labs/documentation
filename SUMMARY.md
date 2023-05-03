@@ -9,9 +9,8 @@
 * [Complete Getting Started](guides/getting-started.md)
 * [Single or Multi Dataset Training](guides/single-or-multi-dataset-training.md)
 * [Data Provider](guides/data-provider.md)
-* [Using Final Models](guides/using-final-models.md)
-* [Automation](guides/automation.md)
-* [Creating Custom Models](guides/creating-custom-models.md)
+* [Start Training](guides/start-training.md)
+* [Using FELT Algorithms](guides/using-felt-algorithms.md)
 * [Creating Custom Algorithms](guides/creating-custom-algorithms.md)
 
 ## Fundamentals
