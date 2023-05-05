@@ -1,8 +1,6 @@
 # Helpful links
 
-Twitter:
-
-{% embed url="https://twitter.com/FELT_labs" %}
+Twitter: [https://twitter.com/FELT\_labs](https://twitter.com/FELT\_labs)
 
 Discord:
 
