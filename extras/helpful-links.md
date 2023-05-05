@@ -2,7 +2,7 @@
 
 Twitter:
 
-{% embed url="https://twitter.com/FELT\_labs" %}
+{% embed url="https://twitter.com/FELT_labs" %}
 
 Discord:
 
