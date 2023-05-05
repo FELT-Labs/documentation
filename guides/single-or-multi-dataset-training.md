@@ -6,11 +6,11 @@ When opening [the FELT application](https://app.feltlabs.ai/), you will have the
 
 ## Starting Training
 
-The start of the training is the same for both options. The only difference is that in the case of the single dataset training, you have to provide one DID (dataset id), and for multiple datasets, you have to provide at least 2 DIDs. The rest of the training setup is the same, you will pick a model, select hyperparameters, and start training. Once the training starts, you can go to [the Launched jobs section](https://app.feltlabs.ai/jobs) of the application to view the results. That's the part where things start to differ.
+The start of the training is the same for both options. The only difference is that in the case of the single dataset training, you pick just one dataset, and for multiple datasets, you pick at least two. The rest of the training setup is the same, you will pick a model, select hyperparameters, and start training. Once the training starts, you can go to [the Launched jobs section](https://app.feltlabs.ai/jobs) of the application to view the results. That's the part where things start to differ.
 
 ## Single Dataset
 
-When viewing the results of single dataset training. You will see only one DID with status. When the training finishes, you can download the model and use it right away. Therefore training on a single dataset is generally faster as it requires starting just one compute job to get the results.
+When viewing the results of single dataset training. You will see only one compute job. When the training finishes, you can download the result and use it right away. Therefore training on a single dataset is generally faster as it requires starting just one compute job to get the results.
 
 <figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption><p>Screenshot from job status for single dataset training.</p></figcaption></figure>
 

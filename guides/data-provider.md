@@ -1,10 +1,10 @@
 # Data Provider
 
-A data provider is anybody who publishes data on Ocean Protocol. When publishing data, you can either pick a trusted Ocean provider or run your own Ocean provider. Ocean provider then runs all the computation with your data. While publishing data you can set different dataset parameters like name, description, price, etc.
+A data provider is someone who publishes data on Ocean Protocol. They can choose to use a trusted Ocean provider or run their own. When publishing data, they set various parameters, such as the name, description, and price of the dataset.
 
-When publishing private data, you don't provide download access but only compute access. For that you need to specify which algorithms can run on top of your data. If you want to allow FELT algorithm, the most important part is to ensure that published data are in the correct format. This is necessary so that FELT algorithms can load data and train the models.
+If you are publishing private data, you only provide compute access and not download access. Therefore, you need to specify which algorithms can run on your data. To allow FELT algorithm, you need to ensure that your data are in the correct format for the algorithm to load the data and train models.
 
-In general data scientists need to be aware of format of the data and its schema so they can create a meaningful algorithm. Data providers need to be awere of the algorithm that data scientist wants to run. If data providers allow this algorithm to be run on their data, they need to specify it in the metadata.
+In general, data scientists need to be aware of format of the data and its schema so they can create a meaningful algorithm. On the other hand, data providers need to be awere of the algorithm that data scientist wants to run. If data provider wants to allow this algorithm to be run on their data, they need to specify it when publishing to Ocean (or later by editing the metadata).
 
 ### Data provider vs Ocean provider
 
@@ -16,13 +16,13 @@ _Keep in mind that once you publish your data, the Ocean provider code has full 
 
 ### Data Format for using FELT algorithm
 
-If you want to use FELT algorithm with your own data, you will first need to have data in the correct data format. Right now, we support only **CSV format**. With the following rules:
+If you want to use FELT algorithm with your own data, you first need to have data in the correct data format. Right now, we support only **CSV format**. With the following rules:
 
 * CSV contains only numerical data
-* Remove header row from data
+* CSV doesn't contain the header row
 * All datasets used during training must have the same number of columns
 
-You can check this file [`house-prices-part1.csv`](https://gist.github.com/Breta01/a8482d3cae0c257e9a7394ca72fdb281) for an example of a data file (**the last column is the target column** other columns are used as features).
+You can check this file [`house-prices-part1.csv`](https://gist.github.com/Breta01/a8482d3cae0c257e9a7394ca72fdb281) as an example.
 
 ### Publishing data
 
@@ -30,6 +30,6 @@ Publishing data can be done through Ocean marketplace. The web application will 
 
 {% embed url="https://docs.oceanprotocol.com/using-ocean-market/marketplace-publish-data-asset" %}
 
-### Approve FELT Algorithms
+Alternatively, you can use their libraries - [ocean.py](https://github.com/oceanprotocol/ocean.py) or [ocean.js](https://github.com/oceanprotocol/ocean.js)
 
-If you are using your data, don’t forget to allow the “Local Training — FELT” algorithm.
+Don't forget to allow algorithms to run on your data.

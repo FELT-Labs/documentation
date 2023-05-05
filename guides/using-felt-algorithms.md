@@ -8,6 +8,12 @@ We provide algorithm which you can use to train scikit learn models and perform 
 
 ## Supported models
 
+We are extending the list of supported models. If you request certain model, we will try to prioritize adding it to our application.
+
+{% embed url="https://github.com/FELT-Labs/feltlabs.py/issues" %}
+Here you can create issue - requesting model type
+{% endembed %}
+
 ### scikit-learn models
 - Regression:
   - [Linear Regression](https://scikit-learn.org/stable/modules/linear_model.html#ordinary-least-squares)
@@ -32,12 +38,6 @@ We provide algorithm which you can use to train scikit learn models and perform 
 
 ### TensorFlow models
 Coming soon
-
-We are extending the list of supported models. If you request certain model type, we will try to prioritize adding it to our application.
-
-{% embed url="https://github.com/FELT-Labs/feltlabs.py/issues" %}
-Here you can create issue - requesting model type
-{% endembed %}
 
 ## Using Final Models
 
