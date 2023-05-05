@@ -18,12 +18,12 @@ Video tutorial following similar structure as this guide.
 
 ## Initial Setup
 
-### Ethereum address
+### Web3 Wallet
 
-There are many options how to create an ethereum address. MetaMask is a good starting point:
+For this guide you need an ethereum address. We recommened using MetaMask wallet:
 
 {% embed url="https://metamask.io/download" %}
-Follow the instuctions here to obtain MetaMask
+Follow the instuctions here to download MetaMask
 {% endembed %}
 
 For this guide we will be using Polygon Mumbai test network.
@@ -62,7 +62,7 @@ We already have the data published on Ocean (using the Mumbai chain) as the foll
 In this guide we will be using FELT algorithms. For that we need to have data in the correct data format. Right now, we support only **CSV format**. With the following rules:
 
 * CSV contains only numerical data
-* Remove header row from data
+* CSV doesn't contain the header row
 * All datasets used during training must have the same number of columns
 
 You can check this file [`house-prices-part1.csv`](https://gist.github.com/Breta01/a8482d3cae0c257e9a7394ca72fdb281) which is used in this article. For more details about publishing your datasets on the Ocean marketplace, please read:
@@ -75,7 +75,7 @@ If you are using your data, don’t forget to allow the “Local Training — FE
 
 ## Starting Local Training <a href="#901e" id="901e"></a>
 
-Now that we have our data ready. It’s time to start the training! Head to the [app.feltoken.ai](https://app.feltoken.ai/). Before you begin, you will need to sign up to FELT.
+Now that we have our data ready. It’s time to start the training! Head to the [app.feltoken.ai](https://app.feltoken.ai/). Before you begin, you need to sign in to FELT.
 
 Then you will select between training on single dataset or on multiple datasets. For our case we will use the **multiple datasets** option. In the first step you will fill in the name of training (you can pick an arbitrary one) and search for our datasets with following dids:
 
@@ -90,7 +90,7 @@ Then you proceed to the next step, where you select the algorithm you want to ru
 
 <figure><img src="../.gitbook/assets/guide-step2.png" alt=""><figcaption><p>Select the algorithm.</p></figcaption></figure>
 
-In the final step you customize parameters of the algoritm. FELT algorithm lets you pick from different models and customize their parameters.  Right now, you can pick from scikit-learn models or calculations of statics (mean, variance...). For our case we can pick any regression model, for example **Ridge regression**.
+In the final step you customize parameters of the algoritm. FELT algorithm lets you pick from different models and customize their parameters.  Right now, you can pick from scikit-learn models or analytics (mean, variance...). For our case we can pick any regression model, for example **Ridge regression**.
 
 One of the most important options is to pick **target column index**. This is the index representing column which we want to predict. Setting value to -1 will use the last column. You can click on submit once you select you hyperparameters.
 
@@ -98,7 +98,7 @@ One of the most important options is to pick **target column index**. This is th
 
 ### Approving Transactions <a href="#4d63" id="4d63"></a>
 
-Once you hit **Submit** button, you will see the summary and then 2 options how to start the traing. Every option how to start the traing is described here:
+Once you hit **Submit** button, you will see the summary and then 2 options how to start the traing. Each option is further described here:
 
 {% content-ref url="guides/start-training.md" %}
 [start-training.md](guides/start-training.md)
@@ -112,19 +112,19 @@ For this guide we will be using browser flow without auto-sign. You will have to
 4. Purchase the algorithm
 5. Sign request to start the compute job (training)
 
-We are starting the training on two datasets; therefore, you will have to approve the set of the above transactions twice.
+We are starting the training on two datasets; therefore, you will have to approve those transactions twice.
 
 <figure><img src="../.gitbook/assets/guide-approve-tx.png" alt=""><figcaption><p>Screenshot from starting training and approving transactions through MetaMask.</p></figcaption></figure>
 
 ## Starting Aggregation <a href="#78b8" id="78b8"></a>
 
-Once you start the local training, you can go to [launched jobs page](https://app.feltlabs.ai/jobs) (you can use **Launched jobs** button). Here you can monitor the compute job progress.
+Once you start the local training, you can go to [launched jobs page](https://app.feltlabs.ai/jobs) (you can use **Launched jobs** button). Here you can monitor the progress.
 
 Once both jobs finish, you can start the aggregation. On right side of each local training you have check box which you can use to select which local trainings should be aggregated (you need to select at least 2). After selecting jobs to aggregate, you can click **Aggregate** button and start the aggregation.
 
 <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Displaying job status; selecting jobs to aggregate and starting the aggregation.</p></figcaption></figure>
 
-After starting the aggregation, the progress bar will pop up. You will have to approve some transactions once again (**if you didn't activate the automation**):
+After starting the aggregation, the progress bar will pop up. You will have to approve the following transactions:
 
 1. Sign URLs to access local models
 2. Approve OCEAN token to pay for provider fees
