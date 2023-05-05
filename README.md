@@ -1,12 +1,10 @@
 # What is FELT Labs?
 
-FELT Labs is a data sciense company. We are providing a set of tools for doing data sciencse on private and distributed data. Currently we are focusing on federated learning on top of the Ocean Protocol. Ocean creates tools for web3 data economy. We allow you to pick datasets from Ocean (any number of them) and train machine learning models or run data analytics across all of them. We also guarantee to preserve data privacy so that individual data aren't revealed. The core of FELT Labs is our web application, allowing users to run the whole process of training seamlessly.
+FELT Labs is a data science company that provides a suite of tools for working with private and distributed data. Our focus is on federated learning, which allows you to train machine learning models or perform data analytics across multiple datasets while preserving data privacy. We built our solution on top of Ocean Protocol, that creates tools for the web3 data economy. This means you can easily select and use datasets from Ocean. Our web application simplifies the entire training process, making it easy for users to get started quickly.
 
-### Federated Learning & How FELT Works
+### Federated Learning and How FELT Works
 
-Federated learning is a process of training a single machine learning model by multiple parties with private data.
-
-For example, you can imagine three separate companies who decide to cooperate on creating a machine learning model which would help them predict better product recommendations to the customers. However, data owned by these companies might be private, or they simply don't want to share data with others to keep some advantage. With federated learning, each company trains the model separately on its data. This local model is then combined with others into one global model. The global model is better than each local model individually. Moreover, the sensitive data aren't revealed to others during this process.
+Federated learning is a powerful technique that enables multiple parties to collaborate on training a single machine learning model while keeping their private data secure. For example, three separate companies might want to create a machine learning model to improve their product recommendations, but they don't want to share their data with each other. With federated learning, each company trains a local model on its own data. These local models are then combined to create a global model that's better than any of the local models individually, while ensuring that no sensitive data is revealed during the process.
 
 {% hint style="info" %}
 There are many applications where companies/individuals can make use of federated learning:
@@ -17,7 +15,7 @@ There are many applications where companies/individuals can make use of federate
 * Ecommerce providing better products to customers
 {% endhint %}
 
-FELT makes this process simple by providing our own algorithms for training the models and then aggregating them. We rely on Ocean protocol to handle everything around data management. All models are encrypted during the exchange, so only approved parties can use them. Data scientists can pick any compatible data published on Ocean protocol and use them for training. They can use algorithms provided by FELT or even create algorithms for their specific use-case and then simple run them through FELT. Finally, data providers can set prices on their data and get paid for providing their data.
+FELT makes federated learning simple by providing its own algorithms for training and aggregating models. We rely on Ocean protocol to handle everything around data management. Our platform allows data scientists to easily select any compatible data published on Ocean and use it to train their models. They can choose our algorithms or create their own for their specific use case, and run them seamlessly through FELT. Meanwhile, data providers can set prices on their data and get paid for providing compute to their private data.
 
 _There are multiple approaches to federated learning. At the moment, FELT implements only one of them, but we have plans to extend this in the future._
 
@@ -25,10 +23,12 @@ _There are multiple approaches to federated learning. At the moment, FELT implem
 
 Key benefits of FELT:
 
-1. **Secure** - all data remains securely on the data provider machine. Architecture is protected by a blockchain network.
-2. **Encrypted** - all trained models are encrypted and exchanged only between interested parties.
-3. **Easy** - running the whole process is very simple.
-4. **Rewards** - data providers get rewards for providing data.
+1. **Secure** - All data remains securely on the data provider machine. Access to data is protected by a blockchain network.
+2. **Encrypted** - All trained models are encrypted and exchanged only between interested parties. This ensures that the models are kept confidential and that privacy is maintained throughout the process.
+3. **Easy** - FELT makes the entire process of federated learning simple and easy to use. With our web application, data scientists can easily select compatible datasets from Ocean, choose their preferred algorithms, and train their models seamlessly.
+4. **Rewards** - Data providers can set prices on their data and get paid for providing their data. This incentivizes data sharing and allows data providers to benefit from the use of their data.
+
+By leveraging FELT's secure, encrypted, and easy-to-use platform, data scientists and data providers can unlock the power of federated learning and gain new insights from their data while maintaining privacy and security.
 
 ## Getting Started
 

@@ -14,6 +14,6 @@ In case you find any issues, you can create an issue in our project repository:
 
 We recommend contacting us via Discord:
 
-{% embed url="https://discord.com/invite/G4ZFfstsV2" %}
+{% embed url="https://discord.gg/AufzHYpQvV" %}
 
 Or you can send us at email: [support@feltlabs.ai](mailto:support@feltlabs.ai)
