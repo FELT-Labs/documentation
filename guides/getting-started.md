@@ -90,7 +90,7 @@ Then you proceed to the next step, where you select the algorithm you want to ru
 
 <figure><img src="../.gitbook/assets/guide-step2.png" alt=""><figcaption><p>Select the algorithm.</p></figcaption></figure>
 
-In the final step you customize parameters of the algoritm. FELT algorithm lets you pick from different models and customize their parameters.  Right now, you can pick from scikit-learn models or analytics (mean, variance...). For our case we can pick any regression model, for example **Ridge regression**.
+In the final step you customize parameters of the algoritm. FELT algorithm lets you pick from different models and customize their parameters. Right now, you can pick from scikit-learn models or analytics (mean, variance...). For our case we can pick any regression model, for example **Ridge regression**.
 
 One of the most important options is to pick **target column index**. This is the index representing column which we want to predict. Setting value to -1 will use the last column. You can click on submit once you select you hyperparameters.
 
@@ -100,11 +100,11 @@ One of the most important options is to pick **target column index**. This is th
 
 Once you hit **Submit** button, you will see the summary and then 2 options how to start the traing. Each option is further described here:
 
-{% content-ref url="guides/start-training.md" %}
-[start-training.md](guides/start-training.md)
+{% content-ref url="start-training.md" %}
+[start-training.md](start-training.md)
 {% endcontent-ref %}
 
-For this guide we will be using browser flow without auto-sign. You will have to approve a few transactions using MetaMask to start the training. Make sure that you connected your Metamask and that you are connected to `Polygon Mumbai` test network. Here is the list of all transactions you will have to confirm:
+For this guide, we will be using browser flow without auto-sign. You will have to approve a few transactions using MetaMask to start the training. Make sure that you connected your Metamask and that you are connected to `Polygon Mumbai` test network. Here is the list of all transactions you will have to confirm:
 
 1. Approve OCEAN token spend to purchase the dataset
 2. Purchase the dataset _(now approve and purchase are separate transactions)_
@@ -133,7 +133,7 @@ After starting the aggregation, the progress bar will pop up. You will have to a
 5. Purchase the algorithm
 6. Sign request to start the compute job (aggregation)
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Use Final Model <a href="#93d9" id="93d9"></a>
 
@@ -152,9 +152,6 @@ When using the federated learning option and importing the model using `load_mod
 {% embed url="https://gist.github.com/Breta01/96f9c3783e18260bb6b512b1c3f94a68#file-felt-load-model-py" %}
 
 That’s it. You just trained your first model on a distributed dataset! Now it’s up to your imagination to find projects where you can use this technology.
-
-
-&#x20;
 
 ## Conclusion
 

@@ -1,42 +1,51 @@
 # Using FELT Algorithms
 
-We provide algorithm which you can use to train scikit learn models and perform data analytics on CSV data. If you need algorithm for your specific use-case see the following section:
+We provide algorithms that you can use to train scikit-learn models and perform data analytics on CSV data. The general workflow of using the FELT application is described in the following:
 
-{% content-ref url="guides/getting-started.md" %}
-[getting-started.md](guides/creating-custom-algorithms.md)
+{% content-ref url="getting-started.md" %}
+[getting-started.md](getting-started.md)
+{% endcontent-ref %}
+
+If you need an algorithm for your specific use case, see the following section:
+
+{% content-ref url="creating-custom-algorithms.md" %}
+[creating-custom-algorithms.md](creating-custom-algorithms.md)
 {% endcontent-ref %}
 
 ## Supported models
 
-We are extending the list of supported models. If you request certain model, we will try to prioritize adding it to our application.
+We are extending the list of supported models. If you request a certain model, we will try to prioritize adding it to our application.
 
 {% embed url="https://github.com/FELT-Labs/feltlabs.py/issues" %}
 Here you can create issue - requesting model type
 {% endembed %}
 
-### scikit-learn models
-- Regression:
-  - [Linear Regression](https://scikit-learn.org/stable/modules/linear_model.html#ordinary-least-squares)
-  - [Ridge Regression](https://scikit-learn.org/stable/modules/linear_model.html#ridge-regression-and-classification)
-  - [Lasso Regression](https://scikit-learn.org/stable/modules/linear_model.html#lasso)
-  - [Elastic-Net](https://scikit-learn.org/stable/modules/linear_model.html#elastic-net)
-  - [LARS Lasso](https://scikit-learn.org/stable/modules/linear_model.html#lars-lasso)
-- Classification:
-  - [SGD Classifier](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDClassifier.html#sklearn.linear_model.SGDClassifier)
-  - [Logistic Regression](https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression)
-- Clustering:
-  - [Nearest Centroid Classifier](https://scikit-learn.org/stable/modules/neighbors.html#nearest-centroid-classifier)
-- Neural Networks:
-  - [MLP Classifier](https://scikit-learn.org/stable/modules/neural_networks_supervised.html#classification)
-  - [MLP Regressor](https://scikit-learn.org/stable/modules/neural_networks_supervised.html#regression)
+### Scikit-learn models
 
-### data analytics
-- Mean
-- Sum
-- Variance
-- Standard deviation
+* Regression:
+  * [Linear Regression](https://scikit-learn.org/stable/modules/linear\_model.html#ordinary-least-squares)
+  * [Ridge Regression](https://scikit-learn.org/stable/modules/linear\_model.html#ridge-regression-and-classification)
+  * [Lasso Regression](https://scikit-learn.org/stable/modules/linear\_model.html#lasso)
+  * [Elastic-Net](https://scikit-learn.org/stable/modules/linear\_model.html#elastic-net)
+  * [LARS Lasso](https://scikit-learn.org/stable/modules/linear\_model.html#lars-lasso)
+* Classification:
+  * [SGD Classifier](https://scikit-learn.org/stable/modules/generated/sklearn.linear\_model.SGDClassifier.html#sklearn.linear\_model.SGDClassifier)
+  * [Logistic Regression](https://scikit-learn.org/stable/modules/linear\_model.html#logistic-regression)
+* Clustering:
+  * [Nearest Centroid Classifier](https://scikit-learn.org/stable/modules/neighbors.html#nearest-centroid-classifier)
+* Neural Networks:
+  * [MLP Classifier](https://scikit-learn.org/stable/modules/neural\_networks\_supervised.html#classification)
+  * [MLP Regressor](https://scikit-learn.org/stable/modules/neural\_networks\_supervised.html#regression)
+
+### Data analytics
+
+* Mean
+* Sum
+* Variance
+* Standard deviation
 
 ### TensorFlow models
+
 Coming soon
 
 ## Using Final Models
@@ -74,7 +83,7 @@ print(mean)
 
 ### Converting FELT format to Python Pickle format
 
-You can convert FELT model format into a standard pickle file. This file will then contain a pickled object of scikit-learn model. FELT library provides an easy command for that. After installing `feltlabs.py` library, you can run:
+You can convert the FELT model format into a standard pickle file. This file will then contain a pickled object of scikit-learn model. FELT library provides an easy command for that. After installing `feltlabs.py` library, you can run:
 
 ```
 felt-export --input "final-model-House Prices.json" --output "model.pkl"

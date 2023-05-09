@@ -8,8 +8,8 @@
 
 * [Complete Getting Started](guides/getting-started.md)
 * [Single or Multi Dataset Training](guides/single-or-multi-dataset-training.md)
-* [Data Provider](guides/data-provider.md)
 * [Start Training](guides/start-training.md)
+* [Data Provider](guides/data-provider.md)
 * [Using FELT Algorithms](guides/using-felt-algorithms.md)
 * [Creating Custom Algorithms](guides/creating-custom-algorithms.md)
 
